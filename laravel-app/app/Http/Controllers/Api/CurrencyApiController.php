@@ -17,7 +17,7 @@ class CurrencyApiController extends Controller
         }
 
         $currencies = $query->orderBy('retrieved_at', 'desc')->paginate(10);
-  
+        
         return view('currencies.index', compact('currencies'));
     }
 

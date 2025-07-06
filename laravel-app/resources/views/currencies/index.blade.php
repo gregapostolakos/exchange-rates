@@ -34,7 +34,7 @@
             <input type="text" name="currency_to" class="form-control" placeholder="Filter by currency (e.g. USD)" value="{{ request('currency_to') }}">
             <button class="btn btn-primary">Search</button>
             @if(request()->filled('currency_to'))
-                <a href="{{ url('/currencies') }}" class="btn btn-outline-secondary">Clear</a>
+                <a href="{{ url('api/currencies') }}" class="btn btn-outline-secondary">Clear</a>
             @endif
         </form>
     </div>
@@ -59,7 +59,7 @@
                             <td>{{ number_format($currency->exchange_rate, 6) }}</td>
                             <td>{{ \Carbon\Carbon::parse($currency->retrieved_at)->format('Y-m-d H:i') }}</td>
                             <td>
-                                <a href="{{ url('/currencies/' . $currency->currency_to) }}" class="btn btn-sm btn-view">View</a>
+                                <a href="{{ url('/api/currencies/' . $currency->currency_to) }}" class="btn btn-sm btn-view">View</a>
                             </td>
                         </tr>
                     @empty

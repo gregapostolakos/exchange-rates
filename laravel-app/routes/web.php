@@ -10,5 +10,3 @@ Route::get('/', function () {
 
 
 Route::get('/currency-rates', [CurrencyController::class, 'getCurrencyRates']);
-Route::get('/currencies', [CurrencyApiController::class, 'index']);
-Route::get('/currencies/{currency_to}', [CurrencyApiController::class, 'show']);

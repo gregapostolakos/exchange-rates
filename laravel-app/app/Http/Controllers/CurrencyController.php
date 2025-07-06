@@ -21,8 +21,6 @@ class CurrencyController extends Controller {
             return response()->json(['error' => $e->getMessage()], 500);
         }
 
-        dd($rates); // Debugging line to inspect the rates
-
-        //return response()->json($rates);
+        return response()->json($rates);
     }
 }

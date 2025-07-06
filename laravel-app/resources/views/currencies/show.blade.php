@@ -9,7 +9,7 @@
 
 <div class="container py-5">
     <div class="mb-4">
-        <a href="{{ url('/currencies') }}" class="btn btn-secondary">&larr; Back to list</a>
+        <a href="{{ url('api/currencies') }}" class="btn btn-secondary">&larr; Back to list</a>
     </div>
 
     <div class="card shadow-sm">
